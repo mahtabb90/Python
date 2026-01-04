@@ -10,7 +10,7 @@ LOG_FILE = LOG_DIR / "app.log"
 class DBConfig:
     host: str = "localhost"
     user: str = "wellness_user"
-    password: str = "StrongPass123!"      # <-- skriv ditt MySQL-lösenord här (om du har)
+    password: str = "StrongPass123!"      
     database: str = "wellness"
     port: int = 3306
 
@@ -18,7 +18,7 @@ class DBConfig:
 @dataclass(frozen=True)
 class Settings:
     log_file: Path = LOG_FILE
-    db: DBConfig = DBConfig()   # <-- VIKTIGT: detta gör settings.db
+    db: DBConfig = DBConfig()  
 
 
 def ensure_dirs(settings: Settings) -> None:

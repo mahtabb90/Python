@@ -31,3 +31,7 @@ def describe_meditation(name: str) -> str:
         f"Effekt: {info['benefit']}\n"
         f"Hur: {info['how']}"
     )
+
+def list_meditation_techniques() -> list[str]:
+    """Returnerar alla tillgängliga meditationstekniker."""
+    return sorted(MEDITATION_TYPES.keys())

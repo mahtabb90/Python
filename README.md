@@ -2,7 +2,16 @@
  beskrivning:
 
 Wellness Tracker är ett terminalbaserat (CLI) Python-program som används för att registrera, analysera och följa upp yoga- och meditationspass.
-Programmet är byggt med en modulär och professionell projektstruktur, använder MySQL som databas och är utvecklat med fokus på kodstruktur, säker input, loggning och analys.
+
+Programmet är byggt med en modulär och projektstruktur, använder MySQL som databas och är utvecklat med fokus på:
+
+. tydlig kodstruktur
+
+. säker hantering av användarinput
+
+. loggning
+
+. analys och rapportering
 
 
 🧱Projektstruktur:
@@ -147,7 +156,8 @@ reports/
 weekly.py
 Funktioner för veckoberäkningar och jämförelse mellan veckor.
 
--Jag använder __init__.py för att definiera tydliga Python-paket och för att dokumentera syftet med varje del av projektet. Det gör strukturen lättare att förstå och underhålla.
+-Jag använder __init__.py för att definiera tydliga Python-paket och dokumentera syftet med varje del av projektet.
+Det gör strukturen lättare att förstå och underhålla.
 
 🗄️ Databas
 
@@ -159,9 +169,9 @@ Separat användare: wellness_user (inte root)
 
 Två huvudtabeller:
 
-yoga_sessions
+   .yoga_sessions
 
-meditation_sessions
+   .meditation_sessions
 
 Detta gör projektet mer realistiskt och säkrare.
 

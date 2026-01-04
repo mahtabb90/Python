@@ -21,13 +21,20 @@ YOGA_STYLES = {
     },
 }
 
-def describe_yoga(style: str) -> str:
-    info = YOGA_STYLES.get(style)
-    if not info:
-        return "Okänd yogatyp."
+def describe_yoga(yoga_type: str) -> str:
+    data = YOGA_STYLES.get(yoga_type)
+
+    if not data:
+        return f"{yoga_type}: Ingen beskrivning tillgänglig."
+
     return (
-        f"{style}\n"
-        f"Beskrivning: {info['description']}\n"
-        f"Fokus: {info['focus']}\n"
-        f"Hur: {info['how']}"
+        f"\n🧘‍♀️ {yoga_type}\n"
+        f"Beskrivning: {data['description']}\n"
+        f"Fokus: {data['focus']}\n"
+        f"Hur: {data['how']}\n"
     )
+
+    
+def list_yoga_styles() -> list[str]:
+    """Returnerar alla tillgängliga yogastilar."""
+    return sorted(YOGA_STYLES.keys())

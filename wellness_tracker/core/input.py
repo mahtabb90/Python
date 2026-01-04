@@ -30,4 +30,4 @@ def ask_date(prompt: str) -> str:
             datetime.strptime(raw, "%Y-%m-%d")
             return raw
         except ValueError:
-            print("Fel format. Använd YYYY-MM-DD, t.ex. 2025-01-15.")
+            print("Fel format. Använd YYYY-MM-DD, t.ex. 2026-01-15.")

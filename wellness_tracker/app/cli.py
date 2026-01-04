@@ -18,8 +18,9 @@ from wellness_tracker.meditation.service import (
 )
 
 from wellness_tracker.reports.weekly import week_range, previous_week_range
-from wellness_tracker.yoga.knowledge import describe_yoga
-from wellness_tracker.meditation.knowledge import describe_meditation
+from wellness_tracker.yoga.knowledge import describe_yoga, list_yoga_styles
+from wellness_tracker.meditation.knowledge import describe_meditation, list_meditation_techniques
+
 
 init(autoreset=True)
 
@@ -221,14 +222,32 @@ def chakra_menu() -> None:
 
 def knowledge_menu() -> None:
     print("\n--- KUNSKAP: YOGA & MEDITATION ---")
-    print("1. Yoga: Yin")
-    print("2. Meditation: Andning")
+    print("1. Yoga: välj stil")
+    print("2. Meditation: välj teknik")
     print("0. Tillbaka")
 
     choice = ask_choice("Välj: ", {"0", "1", "2"})
 
+    if choice == "0":
+        return
+
     if choice == "1":
-        print(describe_yoga("Yin"))
+        styles = list_yoga_styles()
+        print("\nTillgängliga yogastilar:")
+        for i, s in enumerate(styles, start=1):
+            print(f"{i}. {s}")
+
+        idx = ask_int("Välj nummer: ", 1, len(styles))
+        selected = styles[idx - 1]
+        print("\n" + describe_yoga(selected))
 
     elif choice == "2":
-        print(describe_meditation("Andning"))
+        techniques = list_meditation_techniques()
+        print("\nTillgängliga meditationstekniker:")
+        for i, t in enumerate(techniques, start=1):
+            print(f"{i}. {t}")
+
+        idx = ask_int("Välj nummer: ", 1, len(techniques))
+        selected = techniques[idx - 1]
+        print("\n" + describe_meditation(selected))
+
