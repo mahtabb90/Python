@@ -1,6 +1,6 @@
 from .models import YogaSession
 
-# Enkla MET-värden (rimlig grundnivå)
+# Enkla MET-värden
 MET_BY_STYLE = {
     "Yin": 2.0,
     "Hatha": 2.5,
