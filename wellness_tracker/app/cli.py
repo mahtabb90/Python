@@ -32,7 +32,7 @@ def run() -> None:
 
     logger.info("✨App started✨")
 
-    weight_kg = 70.0  # enkel profilinställning
+    weight_kg = 55.0 
 
     while True:
         print("\n========================================")
