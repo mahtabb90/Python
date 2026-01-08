@@ -193,4 +193,6 @@ Installera projektet lokalt
 pip install -e .
 
 ▶️ Hur man kör programmet
+wellness-tracker
+Eller
 winpty wellness-tracker
